@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WalletApi.Data;
 using WalletApi.DTOs;
@@ -35,7 +33,7 @@ public class AuthService : IAuthService
         _db.Users.Add(user);
        await _db.SaveChangesAsync();
        return;
-    }
+    } 
 
     public async Task<AuthResponseDto> Login(LoginDto dto)
     {
